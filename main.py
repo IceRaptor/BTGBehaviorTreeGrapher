@@ -7,7 +7,7 @@ import sys
 
 def split_on_camel_case(camel_case_string):
     split_string = camel_case_string
-    if len(split_string) > 16:
+    if len(split_string) > 12:
         type_tokens = re.split('(?=[A-Z])', split_string)
         pivot = math.ceil(len(type_tokens) / 2)
         split_string = "".join(type_tokens[:pivot]) + "\n" + "".join(type_tokens[pivot:])
